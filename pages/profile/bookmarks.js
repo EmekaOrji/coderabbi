@@ -1,12 +1,12 @@
 import HeadTag from '../components/Head';
 import Nav from '../components/Nav';
-// import styles from '../styles/Home.module.css';
 
-export default function Home() {
+export default function Bookmarks() {
 	return (
 		<div>
 			<HeadTag />
 			<Nav />
+			BOOKMARKS
 		</div>
 	);
 }
