@@ -1,0 +1,49 @@
+#searchArea {
+  padding-top: 3.2em;
+}
+#searchArea fieldset {
+  display: flex;
+  justify-content: space-between;
+  gap: .6em;
+  border: none;
+}
+#searchArea fieldset > .input-container {
+  width: 100%;
+  background-color: #F2F2F2;
+  border: 1px solid #D7D7D7;
+  display: flex;
+  gap: .5em;
+  justify-content: space-between;
+  border-radius: .7em;
+  padding: .7em 2.3em;
+}
+#searchArea fieldset > .input-container .search-icon {
+  width: 1.3em;
+}
+#searchArea fieldset > .input-container input {
+  width: 100%;
+}
+#searchArea fieldset > button {
+  padding-inline: 3em;
+}
+#searchArea fieldset#filter {
+  padding-top: 1.2em;
+}
+#searchArea fieldset#filter label {
+  display: flex;
+  font-size: 1em;
+}
+#searchArea fieldset#filter input {
+  width: 0;
+  overflow: hidden;
+}
+#searchArea fieldset#filter input[type="radio"] {
+  width: 0;
+  overflow: hidden;
+}
+#searchArea fieldset#filter input[type="radio"]:checked ~ .button {
+  color: #FFFFFF;
+}
+#searchArea fieldset#filter input[type="radio"]:checked ~ .button::before {
+  opacity: 1;
+}

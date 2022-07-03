@@ -1,0 +1,36 @@
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('SofiaPro-Light-300.ttf') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('SofiaPro-Regular-400.ttf') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('SofiaPro-Bold-700.ttf') format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('SofiaPro-BoldItalic-700.ttf') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('SofiaPro-ExtraBold-800.ttf') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sofia Pro';
+  src: url('Sofia-Pro-Black-900.ttf') format('woff');
+  font-weight: 900;
+  font-style: normal;
+}

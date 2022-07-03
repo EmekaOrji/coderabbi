@@ -1,0 +1,89 @@
+@import url(../media/fonts/fonts.css);
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 300ms ease-in-out;
+  -webkit-tap-highlight-color: transparent;
+}
+body {
+  min-height: 100vh;
+  /* font-family: 'Open sans', sans-serif; */
+  /* font-family: 'Work Sans', sans-serif; */
+  /* font-family: 'Merriweather Sans', sans-serif; */
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+svg {
+  width: 100%;
+  height: 100%;
+}
+input {
+  background-color: transparent;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  border: none;
+}
+input::placeholder {
+  color: #00000059;
+}
+button, .button {
+  color: #FFFFFF;
+  font-size: inherit;
+  font-family: inherit;
+  font-weight: inherit;
+  position: relative;
+  border: none;
+  border-radius: .7em;
+  outline: none;
+  padding: .7em 1em;
+  isolation: isolate;
+  overflow: hidden;
+  cursor: pointer;
+}
+button.secondary, .button.secondary {
+  color: #000000;
+  border: 2px solid #D7D7D7;
+}
+button.secondary:hover, .button.secondary:hover {
+  color: #FFFFFF;
+}
+button::before, .button::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #FF6464 0%, #AB3838 100%);
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+button.secondary::before, .button.secondary::before {
+  opacity: 0;
+}
+button.secondary:hover::before, .button.secondary:hover::before {
+  opacity: 1;
+}
+
+.container {
+  max-width: 85%;
+  margin-inline: auto;
+}
+@media (min-width: 900px) {
+  .container {
+    max-width: 80%;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1000px;
+  }
+}

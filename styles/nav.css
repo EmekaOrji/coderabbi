@@ -1,0 +1,21 @@
+nav {
+  border: 1px solid red;
+  height: clamp(90px, 11vh, 200px);
+  font-weight: 600;
+}
+nav .nav__content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo {
+  width: 10em;
+}
+nav .nav__links.desktop {
+  width: 40%;
+  min-width: 360px;
+  color: #00000070;
+  display: flex;
+  justify-content: space-between;
+}

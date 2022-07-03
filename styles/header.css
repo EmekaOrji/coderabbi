@@ -1,0 +1,12 @@
+header {
+  padding-top: 3em;
+}
+header cite {
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  color: var(--theme-color, #FF6464);
+}
+header cite span {
+  color: #000000;
+}
