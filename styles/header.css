@@ -1,6 +1,26 @@
 header {
   padding-top: 3em;
 }
+header .header__content {
+  height: 2vh;
+  position: relative;
+}
+header p {
+  white-space: nowrap;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+header p.header__main-text {
+  color: #A4A4A4;
+}
+header p:not(.visible-header) {
+  opacity: 0;
+}
+header .visible-header {
+  opacity: 1;
+}
 header cite {
   font-family: 'Montserrat', sans-serif;
   font-style: normal;

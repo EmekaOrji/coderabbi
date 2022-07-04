@@ -1,5 +1,4 @@
 nav {
-  border: 1px solid red;
   height: clamp(90px, 11vh, 200px);
   font-weight: 600;
 }

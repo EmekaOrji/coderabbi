@@ -1,13 +1,14 @@
 #searchArea {
   padding-top: 3.2em;
 }
-#searchArea fieldset {
+#searchArea .fieldset {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   gap: .6em;
   border: none;
 }
-#searchArea fieldset > .input-container {
+#searchArea .fieldset > .input-container {
   width: 100%;
   background-color: #F2F2F2;
   border: 1px solid #D7D7D7;
@@ -17,33 +18,54 @@
   border-radius: .7em;
   padding: .7em 2.3em;
 }
-#searchArea fieldset > .input-container .search-icon {
+#searchArea .fieldset > .input-container .search-icon {
   width: 1.3em;
 }
-#searchArea fieldset > .input-container input {
+#searchArea .fieldset > .input-container input {
   width: 100%;
 }
-#searchArea fieldset > button {
+#searchArea .fieldset > button {
   padding-inline: 3em;
 }
-#searchArea fieldset#filter {
-  padding-top: 1.2em;
+#searchArea .fieldset#filter {
+  padding-block: 1.2em .5em;
+  overflow-x: scroll;
 }
-#searchArea fieldset#filter label {
+@media (hover: hover) {
+  #searchArea .fieldset#filter::-webkit-scrollbar {
+    height: .6em;
+  }
+  #searchArea .fieldset#filter::-webkit-scrollbar-thumb {
+    background-color: #D7D7D744;
+    border-radius: 1em;
+  }
+  #searchArea .fieldset#filter::-webkit-scrollbar-thumb:hover {
+    background-color: #D7D7D788;
+  }
+  #searchArea .fieldset#filter::-webkit-scrollbar-thumb:active {
+    background-color: #D7D7D7;
+    border: 2px solid #FFFFFF;
+  }
+}
+#searchArea .fieldset#filter label {
   display: flex;
   font-size: 1em;
 }
-#searchArea fieldset#filter input {
+#searchArea .fieldset#filter input {
   width: 0;
   overflow: hidden;
 }
-#searchArea fieldset#filter input[type="radio"] {
+#searchArea .fieldset#filter input[type="radio"] {
   width: 0;
   overflow: hidden;
 }
-#searchArea fieldset#filter input[type="radio"]:checked ~ .button {
+#searchArea .fieldset#filter input[type="radio"] ~ .button {
+  min-width: fit-content;
+  white-space: nowrap;
+}
+#searchArea .fieldset#filter input[type="radio"]:checked ~ .button {
   color: #FFFFFF;
 }
-#searchArea fieldset#filter input[type="radio"]:checked ~ .button::before {
+#searchArea .fieldset#filter input[type="radio"]:checked ~ .button::before {
   opacity: 1;
 }

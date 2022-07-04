@@ -1,13 +1,11 @@
-import Image from 'next/image';
 import Link from 'next/link';
-import logo from '../media/logo/logo.svg';
 
 export default function Nav() {
 	return (
 		<nav>
 			<div className='nav__content container'>
 				<div className='logo'>
-					<Image src={logo} alt='</> CodeRabbi' priority />
+					<img src='/logo.svg' alt='</> CodeRabbi' />
 				</div>
 				<div className='nav__links desktop'>
 					<Link href='/'>Home</Link>

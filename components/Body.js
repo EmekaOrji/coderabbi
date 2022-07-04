@@ -1,6 +1,7 @@
 import Header from '../components/Header';
 import Main from '../components/main';
 import Nav from '../components/Nav';
+import Footer from './Footer';
 
 export default function Body() {
 	return (
@@ -8,6 +9,7 @@ export default function Body() {
 			<Nav />
 			<Header />
 			<Main />
+			<Footer />
 		</>
 	);
 }

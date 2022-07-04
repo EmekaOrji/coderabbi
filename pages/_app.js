@@ -4,6 +4,7 @@ import '../styles/header.css';
 import '../styles/search-area.css';
 import '../styles/home/guide.css';
 import '../styles/global.css';
+import '../styles/footer.css';
 
 function MyApp({ Component, pageProps }) {
 	return <Component {...pageProps} />;

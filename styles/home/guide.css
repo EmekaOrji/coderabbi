@@ -1,3 +1,17 @@
-section {
-  padding-top: 2em;
+section#guide {
+  counter-reset: step;
+  /* padding-top: 2em; */
+}
+#guide blockquote:nth-child(odd) {
+  text-align: right;
+}
+#guide blockquote + blockquote {
+  margin-top: 3em;
+}
+#guide blockquote h3 {
+  counter-increment: step;
+  padding-bottom: .5em;
+}
+#guide blockquote h3::after {
+  content: " " counter(step);
 }

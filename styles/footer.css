@@ -1,0 +1,22 @@
+footer {
+  height: 8vh;
+  background-color: #0E0404;
+  color: #FFFFFFAA;
+  font-size: .9em;
+}
+footer .footer__content {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .footer__links {
+  display: flex;
+  gap: 1.8em;
+}
+footer .footer__links a {
+  width: 1.2em;
+}
+footer .footer__links a:hover svg path {
+  fill: var(--theme-color, #FF6464);
+}
