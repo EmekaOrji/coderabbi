@@ -3,6 +3,7 @@ import '../styles/nav.css';
 import '../styles/header.css';
 import '../styles/search-area.css';
 import '../styles/home/guide.css';
+import '../styles/search-results.css';
 import '../styles/global.css';
 import '../styles/footer.css';
 

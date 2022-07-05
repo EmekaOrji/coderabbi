@@ -46,7 +46,9 @@ export default function SearchArea() {
 								onBlur={() => setInputFocused(false)}
 							/>
 						</div>
-						<button id='search'>Search</button>
+						<button className='primary' id='search'>
+							Search
+						</button>
 					</div>
 
 					<div className='fieldset-container'>

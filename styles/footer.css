@@ -4,6 +4,9 @@ footer {
   color: #FFFFFFAA;
   font-size: .9em;
 }
+footer * {
+  transition-duration: 160ms;
+}
 footer .footer__content {
   height: 100%;
   display: flex;
@@ -16,6 +19,9 @@ footer .footer__links {
 }
 footer .footer__links a {
   width: 1.2em;
+}
+footer .footer__links a:hover {
+  transform: scale(1.15);
 }
 footer .footer__links a:hover svg path {
   fill: var(--theme-color, #FF6464);
