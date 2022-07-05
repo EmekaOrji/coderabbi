@@ -1,6 +1,6 @@
 footer {
   height: 8vh;
-  background-color: #0E0404;
+  background-color: var(--footer-bg-color, #0E0404);
   color: #FFFFFFAA;
   font-size: .9em;
 }

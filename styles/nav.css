@@ -10,11 +10,12 @@ nav .nav__content {
 }
 nav .logo {
   width: 10em;
+  display: flex;
 }
 nav .nav__links.desktop {
   width: 40%;
   min-width: 360px;
-  color: #00000070;
+  color: var(--text-color-secondary, #00000070);
   display: flex;
   justify-content: space-between;
 }

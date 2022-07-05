@@ -2,3 +2,27 @@
   --theme-color: #FF6464;
   --theme-accent-color: #AB3838;
 }
+.light-mode {
+  --bg-color: #FFFFFF;
+  --text-color-primary: #000000;
+  --text-color-secondary: #00000070;
+  --text-color-tertiary: #00000059;
+  --text-color-input-focused: #F2F2F2FF;
+  --text-color-ratings: #707070;
+  --text-color-ratings-hover: #CFCFCF;
+  --source-border-color: #0000001F;
+  --icons-color: #727272;
+  --footer-bg-color: #0E0404;
+}
+.dark-mode {
+  --bg-color: #202438;
+  --text-color-primary: #EEEEEE;
+  --text-color-secondary: #EEEEEE70;
+  --text-color-tertiary: #EEEEEE59;
+  --text-color-input-focused: #F2F2F233;
+  --text-color-ratings: #909090;
+  --text-color-ratings-hover: #FFFFFF;
+  --source-border-color: #FFFFFF5F;
+  --icons-color: #DADADA;
+  --footer-bg-color: #000000;
+}

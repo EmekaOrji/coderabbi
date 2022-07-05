@@ -10,7 +10,7 @@
 }
 #searchArea .fieldset > .input-container {
   width: 100%;
-  background-color: #F2F2F2;
+  background-color: #F2F2F222;
   border: 1px solid #D7D7D7;
   display: flex;
   gap: .5em;
@@ -44,7 +44,7 @@
   }
   #searchArea .fieldset#filter::-webkit-scrollbar-thumb:active {
     background-color: #D7D7D7;
-    border: 2px solid #FFFFFF;
+    border: 2px solid var(--bg-color, #FFFFFF);
   }
 }
 #searchArea .fieldset#filter label {

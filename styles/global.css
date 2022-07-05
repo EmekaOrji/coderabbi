@@ -9,6 +9,8 @@
 }
 body {
   min-height: 100vh;
+  background-color: var(--bg-color, #FFFFFF);
+  color: var(--text-color-primary, #000000);
   /* font-family: 'Open sans', sans-serif; */
   /* font-family: 'Work Sans', sans-serif; */
   /* font-family: 'Merriweather Sans', sans-serif; */
@@ -40,6 +42,12 @@ a {
   display: block;
   text-decoration: none;
 }
+a:not(.button):hover {
+  color: #FF6464;
+}
+a:not(.button):hover *:not(div) {
+  color: #FF6464;
+}
 .icon {
   width: 2em;
   height: 2em;
@@ -50,6 +58,7 @@ img, svg {
 }
 input {
   background-color: transparent;
+  color: inherit;
   font-size: inherit;
   font-family: inherit;
   font-weight: inherit;
@@ -57,9 +66,10 @@ input {
   outline: none;
 }
 input::placeholder {
-  color: #00000059;
+  color: var(--text-color-tertiary, #00000059);
 }
 button, .button {
+  color: inherit;
   font-size: inherit;
   font-family: inherit;
   font-weight: inherit;
@@ -92,7 +102,7 @@ button.secondary:hover::after, a.button.secondary:hover::after {
 }
 button.secondary, .button.secondary {
   /* font-size: min(1em, 1.18vw); */
-  color: #000000;
+  color: var(--text-color-secondary, #000000);
   border: 2px solid #D7D7D7;
 }
 button.secondary:hover, .button.secondary:hover {
@@ -117,8 +127,8 @@ button.secondary:hover::before, .button.secondary:hover::before {
   opacity: 1;
 }
 button.tertiary, a.button.tertiary {
-  padding: .3em;
-  border-radius: .3em;
+  padding: .4em;
+  border-radius: .45em;
 }
 button.tertiary:hover, a.button.tertiary:hover {
   background-color: #FF646488;
