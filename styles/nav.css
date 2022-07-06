@@ -16,6 +16,18 @@ nav .nav__links.desktop {
   width: 40%;
   min-width: 360px;
   color: var(--text-color-secondary, #00000070);
-  display: flex;
+  display: none;
   justify-content: space-between;
+  transition: all 1000ms cubic-bezier(.13,1,0,.86);
+}
+nav .nav__links.desktop * {
+  transition: all 900ms ease-out;
+}
+nav .nav__links.desktop *:hover {
+  transition: all 500ms cubic-bezier(.13,1,0,.86);
+}
+@media (min-width: 700px) {
+  nav .nav__links.desktop {
+    display: flex;
+  }
 }

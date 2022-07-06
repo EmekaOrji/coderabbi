@@ -7,7 +7,8 @@
   --text-color-primary: #000000;
   --text-color-secondary: #00000070;
   --text-color-tertiary: #00000059;
-  --text-color-input-focused: #F2F2F2FF;
+  --text-color-input: #F2F2F2FF;
+  --text-color-input-focused: #F2F2F299;
   --text-color-ratings: #707070;
   --text-color-ratings-hover: #CFCFCF;
   --source-border-color: #0000001F;
@@ -19,7 +20,8 @@
   --text-color-primary: #EEEEEE;
   --text-color-secondary: #EEEEEE70;
   --text-color-tertiary: #EEEEEE59;
-  --text-color-input-focused: #F2F2F233;
+  --text-color-input: #F2F2F233;
+  --text-color-input-focused: #F2F2F219;
   --text-color-ratings: #909090;
   --text-color-ratings-hover: #FFFFFF;
   --source-border-color: #FFFFFF5F;

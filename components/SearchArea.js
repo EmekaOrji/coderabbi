@@ -5,6 +5,17 @@ export default function SearchArea() {
 	const [inputValue, setInputValue] = useState('');
 	const [radioValue, setRadioValue] = useState('mostRelevance');
 
+	function changeColorMode() {
+		if (document.querySelector('html').classList.contains('dark-mode')) {
+			document.querySelector('html').classList.remove('dark-mode');
+			document.querySelector('html').classList.add('light-mode');
+		} else {
+			document.querySelector('html').classList.remove('light-mode');
+			document.querySelector('html').classList.add('dark-mode');
+		}
+		// document.querySelector('html').classList.add('dark-mode');
+	}
+
 	const handleCheckChange = (event) => {
 		setRadioValue(event.target.value);
 	};
@@ -18,11 +29,17 @@ export default function SearchArea() {
 							className='input-container'
 							style={
 								inputFocused
-									? { backgroundColor: '#F2F2F299' }
-									: {
+									? {
 											backgroundColor:
-												'var(--text-color-input-focused, #F2F2F2FF)',
+												'var(--text-color-input-focused, #F2F2F299)',
 									  }
+									: {
+											backgroundColor: 'var(--text-color-input, #F2F2F2FF)',
+									  }
+							}
+							tabIndex='0'
+							onFocus={(event) =>
+								event.currentTarget.querySelector('input').focus()
 							}>
 							<span className='search-icon'>
 								<svg
@@ -49,7 +66,11 @@ export default function SearchArea() {
 								onBlur={() => setInputFocused(false)}
 							/>
 						</div>
-						<button className='primary' id='search'>
+						<button
+							className='primary'
+							type='button'
+							id='search'
+							onClick={changeColorMode}>
 							Search
 						</button>
 					</div>
