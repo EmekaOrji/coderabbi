@@ -17,9 +17,10 @@ export default function Result(props) {
 					</div>
 					<div className='result__text'>
 						<p>
-							You can get started in coding by first having a passion for it,
-							desire it, be determined to learn and become the best you can be.
-							Also, surpass your own limits and no matter what don...
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+							minus facilis veritatis earum harum, dolorem dignissimos culpa
+							mollitia beatae accusantium libero? Ducimus dignissimos impedit
+							laboriosam, dolores architecto veritatis tempore quibusdam?
 						</p>
 					</div>
 					<div className='result__owner'>

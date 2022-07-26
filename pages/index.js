@@ -10,15 +10,14 @@ export async function getServerSideProps({ query }) {
 		};
 
 	const stackOverflowData = await fetch(
-		// `https://api.stackexchange.com/2.3/search?order=desc&sort=activity&intitle=${query.search}&site=stackoverflow`
-		`https://jsonplaceholder.typicode.com/todos`
+		`https://api.stackexchange.com/2.3/search?order=desc&sort=activity&intitle=${query.search}&site=stackoverflow`
 	);
 	const stackOverflowResults = await stackOverflowData.json();
 
 	return {
 		props: {
 			searchResults: {
-				stackOverflowResults,
+				stackOverflowResults: stackOverflowResults,
 			},
 		},
 	};
@@ -26,7 +25,7 @@ export async function getServerSideProps({ query }) {
 
 export default function Home({ searchResults }) {
 	return (
-		<div className='flex-body'>
+		<div>
 			<HeadTag />
 			<Body searchResults={searchResults} />
 		</div>

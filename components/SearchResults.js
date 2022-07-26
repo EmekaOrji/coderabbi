@@ -1,13 +1,12 @@
 import Result from './Result';
 import sourceInfo from './SourceInfo';
-import searchResults from '../data/stacoverflow.json';
 
-export default function SearchResults() {
-	console.log(searchResults.items);
+export default function SearchResults({ searchResults }) {
+	console.log(searchResults);
 	return (
 		<section id='searchResults'>
 			<div className='search-results__content container'>
-				{searchResults.items.map((item) => (
+				{searchResults?.stackOverflowResults.items.map((item) => (
 					<Result
 						sourceInfo={sourceInfo.StackOverflow}
 						key={item.question_id}

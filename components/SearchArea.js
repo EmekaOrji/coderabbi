@@ -67,6 +67,9 @@ export default function SearchArea() {
 								onChange={(event) => setInputValue(event.target.value)}
 								onFocus={() => setInputFocused(true)}
 								onBlur={() => setInputFocused(false)}
+								onKeyDown={(e) =>
+									e.which === 13 && router.push(`?search=${inputValue}`)
+								}
 							/>
 						</div>
 						<button
