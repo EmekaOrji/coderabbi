@@ -1,15 +1,11 @@
 import Header from '../components/Header';
 import Main from '../components/main';
-import Nav from '../components/Nav';
-import Footer from './Footer';
 
-export default function Body() {
+export default function Body({ searchResults }) {
 	return (
 		<>
-			<Nav />
 			<Header />
-			<Main />
-			<Footer />
+			<Main searchResults={searchResults} />
 		</>
 	);
 }

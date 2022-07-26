@@ -1,9 +1,12 @@
 import { useState } from 'react';
+import { useRouter } from 'next/router';
+import RadioButton from './RadioButton';
 
 export default function SearchArea() {
 	const [inputFocused, setInputFocused] = useState(false);
 	const [inputValue, setInputValue] = useState('');
 	const [radioValue, setRadioValue] = useState('mostRelevance');
+	const router = useRouter();
 
 	function changeColorMode() {
 		if (document.querySelector('html').classList.contains('dark-mode')) {
@@ -64,15 +67,27 @@ export default function SearchArea() {
 								onChange={(event) => setInputValue(event.target.value)}
 								onFocus={() => setInputFocused(true)}
 								onBlur={() => setInputFocused(false)}
+								onKeyDown={(e) =>
+									e.which === 13 && router.push(`?search=${inputValue}`)
+								}
 							/>
 						</div>
 						<button
 							className='primary'
 							type='button'
 							id='search'
-							onClick={changeColorMode}>
+							onClick={() => router.push(`?search=${inputValue}`)}>
 							Search
 						</button>
+						{/* <div className='warning'>
+							<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'>
+								<path
+									d='M256 0C114.6 0 0 114.6 0 256s114.6 256 256 256s256-114.6 256-256S397.4 0 256 0zM232 152C232 138.8 242.8 128 256 128s24 10.75 24 24v128c0 13.25-10.75 24-24 24S232 293.3 232 280V152zM256 400c-17.36 0-31.44-14.08-31.44-31.44c0-17.36 14.07-31.44 31.44-31.44s31.44 14.08 31.44 31.44C287.4 385.9 273.4 400 256 400z'
+									fill='#FFFFFF'
+								/>
+							</svg>{' '}
+							Search feature currently down
+						</div> */}
 					</div>
 
 					<div className='fieldset-container'>
@@ -126,20 +141,3 @@ export default function SearchArea() {
 		</>
 	);
 }
-
-const RadioButton = ({ id, radioValue, onChange, children }) => {
-	return (
-		<>
-			<label>
-				<input
-					type='radio'
-					id={id}
-					value={id}
-					checked={radioValue === id}
-					onChange={onChange}
-				/>
-				<div className='radio-view button secondary'>{children}</div>
-			</label>
-		</>
-	);
-};
