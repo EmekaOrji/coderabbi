@@ -25,7 +25,7 @@ export default function SearchArea() {
 
 	return (
 		<>
-			<form id='searchArea'>
+			<form onSubmit={(e) => e.preventDefault()} id='searchArea'>
 				<div className='form__content container'>
 					<div className='fieldset'>
 						<div
@@ -67,8 +67,7 @@ export default function SearchArea() {
 								onChange={(event) => setInputValue(event.target.value)}
 								onFocus={() => setInputFocused(true)}
 								onBlur={() => setInputFocused(false)}
-								onKeyDown={(e) => {
-									console.log(e.which);
+								onKeyPress={(e) => {
 									if (e.which === 13) {
 										router.push(`?search=${inputValue}`);
 									}
