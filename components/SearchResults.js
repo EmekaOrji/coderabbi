@@ -2,7 +2,6 @@ import Result from './Result';
 import sourceInfo from './SourceInfo';
 
 export default function SearchResults({ searchResults }) {
-	console.log(searchResults);
 	return (
 		<section id='searchResults'>
 			<div className='search-results__content container'>
